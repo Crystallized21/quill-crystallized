@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from 'react'; // Import useEffect
+import { useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation'
 import { trpc } from '../_trpc/client'
 import { Loader2 } from 'lucide-react'
@@ -17,7 +17,7 @@ const Page = () => {
         retryDelay: 500,
     });
 
-    // Handle success in useEffect
+    // Handle success in useEffect, user is synced to db
     useEffect(() => {
         if (isSuccess && data?.success) {
             router.push(origin ? `/${origin}` : '/dashboard');
@@ -30,6 +30,7 @@ const Page = () => {
             router.push('/sign-in');
         }
     }, [isError, error, router]);
+
 
     return (
         <div className='w-full mt-24 flex justify-center'>
