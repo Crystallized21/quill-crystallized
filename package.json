@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@kinde-oss/kinde-auth-nextjs": "^2.3.3",
     "@radix-ui/react-slot": "^1.1.0",
     "@tailwindcss/typography": "github:tailwindcss/typography",
     "add": "^2.0.6",
